@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://5eqvev4mr37g"]
+[gd_scene load_steps=2 format=3 uid="uid://5eqvev4mr37g"]
+
+[ext_resource type="Script" path="res://scenes/cruiser.gd" id="1_gjqnn"]
 
 [node name="Cruiser" type="Node2D"]
+script = ExtResource("1_gjqnn")
 
 [node name="Sprite" type="ColorRect" parent="."]
 offset_left = -20.0
