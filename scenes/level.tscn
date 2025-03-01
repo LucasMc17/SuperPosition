@@ -18,8 +18,9 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 65537, 0, 0, 65538, 0, 0,
 [node name="HeroShips" type="Node" parent="."]
 
 [node name="Cruiser" parent="HeroShips" instance=ExtResource("2_eruic")]
-position = Vector2(617, 283)
-direction = 0
+position = Vector2(275, 305)
+direction = 4
+current_momentum = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(384, 384)
