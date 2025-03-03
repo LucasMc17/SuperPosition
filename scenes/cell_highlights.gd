@@ -1,9 +1,20 @@
 extends Node2D
 
 const HIGHLIGHT = preload('res://assets/highlight.png')
+const CELL_HIGHLIGHT = preload('res://assets/cell_highlight.png')
 
 @onready var move_lights = $movement_highlights
+@onready var unit_lights = $unit_highlights
 
+var clickable
+
+func _on_show_available_units(units):
+	clickable = units
+	for child in unit_lights.get_children():
+		child.queue_free()
+	
+	for unit in units:
+		add_highlight(Color(1.0, 0.5, 0.0, 1), Navigation.get_pos_from_coords(unit), unit_lights, CELL_HIGHLIGHT)
 
 func _on_show_move_options(options: Array):
 	for child in move_lights.get_children():
@@ -23,9 +34,6 @@ func _process(delta):
 func _on_show_turn_options():
 	pass
 
-func _on_show_available_units():
-	pass
-
 func add_highlight(color: Color, pos: Vector2, parent: Node, tex: Texture) -> void:
 	var s = Sprite2D.new()
 	s.texture = tex
@@ -33,3 +41,12 @@ func add_highlight(color: Color, pos: Vector2, parent: Node, tex: Texture) -> vo
 	s.centered = false
 	s.global_position = pos
 	s.modulate = color
+
+#func _unhandled_input(event: InputEvent) -> void:
+	##if event is InputEventMouseMotion:
+	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		#var cell = Navigation.get_coords_from_pos(get_global_mouse_position())
+		#print(cell)
+		#print(clickable)
+		#if (clickable.has(cell)):
+			#print (true) 

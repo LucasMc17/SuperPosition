@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://j1bnvdngfuyk"]
+[gd_scene load_steps=6 format=3 uid="uid://j1bnvdngfuyk"]
 
 [ext_resource type="TileSet" uid="uid://b42qd03ln3h6l" path="res://tilesets/battle-field.tres" id="1_anb6f"]
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_yqmlu"]
 [ext_resource type="PackedScene" uid="uid://5eqvev4mr37g" path="res://scenes/cruiser.tscn" id="2_eruic"]
 [ext_resource type="PackedScene" uid="uid://67sq8x5fq6ww" path="res://scenes/cell_highlights.tscn" id="2_u2lur"]
+[ext_resource type="PackedScene" uid="uid://bi8xg12vbkswf" path="res://scenes/fighter.tscn" id="5_xqyuu"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_yqmlu")
@@ -19,8 +20,12 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 65537, 0, 0, 65538, 0, 0,
 
 [node name="Cruiser" parent="HeroShips" instance=ExtResource("2_eruic")]
 position = Vector2(275, 305)
-direction = 4
 current_momentum = 3
+
+[node name="Fighter" parent="HeroShips" instance=ExtResource("5_xqyuu")]
+position = Vector2(538, 224)
+
+[node name="EnemyShips" type="Node" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(384, 384)

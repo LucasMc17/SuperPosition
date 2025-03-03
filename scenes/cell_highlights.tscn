@@ -6,3 +6,5 @@
 script = ExtResource("1_tdg61")
 
 [node name="movement_highlights" type="Node2D" parent="."]
+
+[node name="unit_highlights" type="Node2D" parent="."]
