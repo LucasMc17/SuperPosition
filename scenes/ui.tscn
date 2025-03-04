@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dta0a7mqliou5"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_823t5"]
+[ext_resource type="Texture2D" uid="uid://bk2x1aomrkq7q" path="res://assets/exit button.png" id="1_lrhfn"]
+[ext_resource type="Texture2D" uid="uid://rvj7fbgbidus" path="res://assets/undo button.png" id="2_x3c83"]
+[ext_resource type="Texture2D" uid="uid://bfm4g2f8i2b67" path="res://assets/confirm button.png" id="4_1tsnr"]
+
+[node name="UI" type="Node2D"]
+script = ExtResource("1_823t5")
+
+[node name="exit_button" type="TextureButton" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 74.0
+offset_bottom = 74.0
+texture_normal = ExtResource("1_lrhfn")
+
+[node name="undo_button" type="TextureButton" parent="."]
+offset_left = 10.0
+offset_top = 84.0
+offset_right = 74.0
+offset_bottom = 148.0
+texture_normal = ExtResource("2_x3c83")
+
+[node name="confirm_button" type="TextureButton" parent="."]
+offset_left = 10.0
+offset_top = 158.0
+offset_right = 74.0
+offset_bottom = 222.0
+texture_normal = ExtResource("4_1tsnr")
+
+[connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="undo_button" to="." method="_on_undo_button_pressed"]
+[connection signal="pressed" from="confirm_button" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="confirm_button" to="." method="_on_undo_button_pressed"]
