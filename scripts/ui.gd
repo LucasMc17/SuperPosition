@@ -21,6 +21,5 @@ func _on_exit_button_pressed():
 func _on_undo_button_pressed():
 	GameState.reset_turn()
 
-
 func _on_confirm_button_pressed():
 	GameState.end_turn()

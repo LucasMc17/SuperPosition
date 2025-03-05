@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0mbp0ash3bkn"]
+
+[ext_resource type="Script" path="res://scripts/unit.gd" id="1_intfo"]
+[ext_resource type="Texture2D" uid="uid://cot17tagbekjt" path="res://assets/highlight.png" id="2_4yp2l"]
+[ext_resource type="Script" path="res://scripts/movement_options.gd" id="3_c3ar4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v5ivx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4yp2l")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Unit" type="Node2D"]
+script = ExtResource("1_intfo")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v5ivx")
+animation = &"idle"
+
+[node name="movement_options" type="Node" parent="."]
+script = ExtResource("3_c3ar4")
