@@ -1,12 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://clm04funcvv8s"]
 
 [ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/unit.tscn" id="1_bumjn"]
-[ext_resource type="Script" path="res://scripts/unit_movement_move.gd" id="2_su373"]
+[ext_resource type="Script" path="res://scripts/option_move.gd" id="2_hjc8o"]
 
 [node name="Cruiser2" instance=ExtResource("1_bumjn")]
 momentum_limits = 3
 current_momentum = 3
 size = 2
 
-[node name="Move" type="Node" parent="movement_options" index="0"]
-script = ExtResource("2_su373")
+[node name="option_machine" parent="." index="1" node_paths=PackedStringArray("initial_option")]
+initial_option = NodePath("move")
+
+[node name="move" type="Node2D" parent="option_machine" index="0"]
+script = ExtResource("2_hjc8o")

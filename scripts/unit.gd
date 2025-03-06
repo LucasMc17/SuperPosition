@@ -14,11 +14,12 @@ enum directions {UP, RIGHT, DOWN, LEFT, OMNI}
 @onready var current_coords : Array[Vector2] = [Navigation.get_coords_from_pos(global_position)]
 @onready var player = get_parent()
 @onready var sprite = $Sprite
-@onready var movement_options = $movement_options
+@onready var option_machine = $option_machine
 
 var available_moves = []
 var has_moved = false
 var has_acted = false
+var remaining_movement_points = current_momentum
 var original_coords : Vector2
 var original_direction : directions
 
@@ -58,31 +59,30 @@ func _unhandled_input(event: InputEvent) -> void:
 		var cell = Navigation.get_coords_from_pos(get_global_mouse_position())
 		if GameState.current_unit == null and current_coords.has(cell):
 			handle_select()
-		
-		if GameState.current_unit == self and available_moves.has(cell):
-			handle_move(cell)
 
 func handle_select():
 	print('selected')
-	movement_options.chosen.get_available_moves()
+	#movement_options.chosen.get_available_moves()
 	#get_available_moves()
 	GameState.current_unit = self
-	EventBus.show_available_units.emit([])
+	option_machine.current_option.Enter()
+	#EventBus.show_available_units.emit([])
 
-func handle_move(cell):
-	global_position = Navigation.snap_to_tile(Navigation.get_pos_from_coords(cell), true)
-	current_coords = get_current_coords(cell)
-	has_moved = true
-	print("move to")
-	print(cell)
-	if has_moved: # and has_acted to go here later
-		GameState.init_unit_select()
+#func handle_move(cell):
+	#global_position = Navigation.snap_to_tile(Navigation.get_pos_from_coords(cell), true)
+	#current_coords = get_current_coords(cell)
+	#has_moved = true
+	#print("move to")
+	#print(cell)
+	#if has_moved: # and has_acted to go here later
+		#GameState.init_unit_select()
 
 func init_turn():
 	original_coords = current_coords[0]
 	original_direction = direction
 	has_moved = false
 	has_acted = false
+	remaining_movement_points = current_momentum
 
 func reset_turn():
 	direction = original_direction
@@ -90,5 +90,6 @@ func reset_turn():
 	global_position = Navigation.snap_to_tile(Navigation.get_pos_from_coords(original_coords), true)
 	has_moved = false
 	has_acted = false
+	remaining_movement_points = current_momentum
 
 

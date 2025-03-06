@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/unit.gd" id="1_intfo"]
 [ext_resource type="Texture2D" uid="uid://cot17tagbekjt" path="res://assets/highlight.png" id="2_4yp2l"]
-[ext_resource type="Script" path="res://scripts/movement_options.gd" id="3_c3ar4"]
+[ext_resource type="Script" path="res://scripts/option_machine.gd" id="3_sqm2b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v5ivx"]
 animations = [{
@@ -22,5 +22,5 @@ script = ExtResource("1_intfo")
 sprite_frames = SubResource("SpriteFrames_v5ivx")
 animation = &"idle"
 
-[node name="movement_options" type="Node" parent="."]
-script = ExtResource("3_c3ar4")
+[node name="option_machine" type="Node" parent="."]
+script = ExtResource("3_sqm2b")

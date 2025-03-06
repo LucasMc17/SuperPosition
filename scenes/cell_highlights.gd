@@ -27,12 +27,20 @@ func _ready():
 	EventBus.show_move_options.connect(_on_show_move_options)
 	EventBus.show_turn_options.connect(_on_show_turn_options)
 	EventBus.show_available_units.connect(_on_show_available_units)
+	EventBus.clear_highlights.connect(_on_clear_highlight)
 
 func _process(delta):
 	pass
 
 func _on_show_turn_options():
 	pass
+
+func _on_clear_highlight():
+	for child in move_lights.get_children():
+		child.queue_free()
+	
+	for child in unit_lights.get_children():
+		child.queue_free()
 
 func add_highlight(color: Color, pos: Vector2, parent: Node, tex: Texture) -> void:
 	var s = Sprite2D.new()
