@@ -68,14 +68,15 @@ func handle_select():
 	option_machine.current_option.Enter()
 	#EventBus.show_available_units.emit([])
 
-#func handle_move(cell):
-	#global_position = Navigation.snap_to_tile(Navigation.get_pos_from_coords(cell), true)
-	#current_coords = get_current_coords(cell)
-	#has_moved = true
-	#print("move to")
-	#print(cell)
-	#if has_moved: # and has_acted to go here later
-		#GameState.init_unit_select()
+func handle_move(cell, cost):
+	global_position = Navigation.snap_to_tile(Navigation.get_pos_from_coords(cell), true)
+	current_coords = get_current_coords(cell)
+	has_moved = true
+	remaining_movement_points -= cost
+	print("move to")
+	print(cell)
+	if has_moved: # and has_acted to go here later
+		GameState.init_unit_select()
 
 func init_turn():
 	original_coords = current_coords[0]

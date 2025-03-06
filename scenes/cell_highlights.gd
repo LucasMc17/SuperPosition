@@ -20,8 +20,9 @@ func _on_show_move_options(options: Array):
 	for child in move_lights.get_children():
 		child.queue_free()
 	
-	for option in options:
-		add_highlight(Color(1.0, 0.5, 0.0, 1), Navigation.get_pos_from_coords(option), move_lights, HIGHLIGHT)
+	for group in options:
+		for option in group.coords:
+			add_highlight(Color(1.0, 0.5, 0.0, 1), Navigation.get_pos_from_coords(option), move_lights, HIGHLIGHT)
 
 func _ready():
 	EventBus.show_move_options.connect(_on_show_move_options)

@@ -3,16 +3,31 @@ class_name Option
 
 signal Transitioned
 
-var unit : Unit 
+var unit : Unit
+
+var clickable_groups = []
 
 func Enter():
-	default()
+	clear()
 
 func Exit():
 	pass
 
-func Select():
+func Select(group, cell):
 	pass
 
-func default():
+func clear():
 	EventBus.clear_highlights.emit()
+
+func _unhandled_input(event):
+	if GameState.current_unit == unit and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var cell = Navigation.get_coords_from_pos(get_global_mouse_position())
+		print(cell)
+		print(clickable_groups)
+		#print(clickable)
+		#if (clickable.has(cell)):
+			#print (true)
+		for group in clickable_groups:
+			if group.coords.has(cell):
+				Select(group, cell)
+				return

@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://035h7y1karyx"]
+[gd_scene load_steps=3 format=3 uid="uid://035h7y1karyx"]
 
 [ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/unit.tscn" id="1_ygd8o"]
+[ext_resource type="Script" path="res://scripts/option_move.gd" id="2_wg8l0"]
 
 [node name="Fighter" instance=ExtResource("1_ygd8o")]
 direction = 4
+
+[node name="option_machine" parent="." index="1" node_paths=PackedStringArray("initial_option")]
+initial_option = NodePath("move")
+
+[node name="move" type="Node2D" parent="option_machine" index="0"]
+script = ExtResource("2_wg8l0")
