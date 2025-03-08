@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dta0a7mqliou5"]
 
-[ext_resource type="Script" path="res://scripts/ui.gd" id="1_823t5"]
+[ext_resource type="Script" path="res://scenes/UI/ui.gd" id="1_823t5"]
 [ext_resource type="Texture2D" uid="uid://bk2x1aomrkq7q" path="res://assets/exit button.png" id="1_lrhfn"]
 [ext_resource type="Texture2D" uid="uid://rvj7fbgbidus" path="res://assets/undo button.png" id="2_x3c83"]
 [ext_resource type="Texture2D" uid="uid://bfm4g2f8i2b67" path="res://assets/confirm button.png" id="4_1tsnr"]
@@ -32,5 +32,4 @@ texture_normal = ExtResource("4_1tsnr")
 
 [connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="undo_button" to="." method="_on_undo_button_pressed"]
-[connection signal="pressed" from="confirm_button" to="." method="_on_undo_button_pressed"]
 [connection signal="pressed" from="confirm_button" to="." method="_on_confirm_button_pressed"]

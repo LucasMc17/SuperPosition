@@ -19,7 +19,9 @@ func _on_exit_button_pressed():
 	GameState.init_unit_select()
 
 func _on_undo_button_pressed():
+	print("undo")
 	GameState.reset_turn()
 
 func _on_confirm_button_pressed():
+	print("confirmed")
 	GameState.end_turn()

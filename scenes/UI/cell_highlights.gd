@@ -50,12 +50,3 @@ func add_highlight(color: Color, pos: Vector2, parent: Node, tex: Texture) -> vo
 	s.centered = false
 	s.global_position = pos
 	s.modulate = color
-
-#func _unhandled_input(event: InputEvent) -> void:
-	##if event is InputEventMouseMotion:
-	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		#var cell = Navigation.get_coords_from_pos(get_global_mouse_position())
-		#print(cell)
-		#print(clickable)
-		#if (clickable.has(cell)):
-			#print (true) 

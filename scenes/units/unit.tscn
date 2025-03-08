@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0mbp0ash3bkn"]
 
-[ext_resource type="Script" path="res://scripts/unit.gd" id="1_intfo"]
-[ext_resource type="Texture2D" uid="uid://cot17tagbekjt" path="res://assets/highlight.png" id="2_4yp2l"]
-[ext_resource type="Script" path="res://scripts/option_machine.gd" id="3_sqm2b"]
+[ext_resource type="Script" path="res://scenes/units/unit.gd" id="1_3rdqh"]
+[ext_resource type="Texture2D" uid="uid://cot17tagbekjt" path="res://assets/highlight.png" id="2_8jx3c"]
+[ext_resource type="Script" path="res://options/option_machine.gd" id="3_3ftyh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v5ivx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_4yp2l")
+"texture": ExtResource("2_8jx3c")
 }],
 "loop": true,
 "name": &"idle",
@@ -16,11 +16,11 @@ animations = [{
 }]
 
 [node name="Unit" type="Node2D"]
-script = ExtResource("1_intfo")
+script = ExtResource("1_3rdqh")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_v5ivx")
 animation = &"idle"
 
 [node name="option_machine" type="Node" parent="."]
-script = ExtResource("3_sqm2b")
+script = ExtResource("3_3ftyh")

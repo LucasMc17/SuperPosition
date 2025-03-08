@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://035h7y1karyx"]
 
-[ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/unit.tscn" id="1_ygd8o"]
-[ext_resource type="Script" path="res://scripts/option_move.gd" id="2_wg8l0"]
+[ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/units/unit.tscn" id="1_ygd8o"]
+[ext_resource type="Script" path="res://options/movement/option_move.gd" id="2_vsu8y"]
 
 [node name="Fighter" instance=ExtResource("1_ygd8o")]
 direction = 4
@@ -10,4 +10,4 @@ direction = 4
 initial_option = NodePath("move")
 
 [node name="move" type="Node2D" parent="option_machine" index="0"]
-script = ExtResource("2_wg8l0")
+script = ExtResource("2_vsu8y")

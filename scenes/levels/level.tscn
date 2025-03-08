@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://j1bnvdngfuyk"]
 
 [ext_resource type="TileSet" uid="uid://b42qd03ln3h6l" path="res://tilesets/battle-field.tres" id="1_anb6f"]
-[ext_resource type="Script" path="res://scenes/level.gd" id="1_yqmlu"]
-[ext_resource type="PackedScene" uid="uid://67sq8x5fq6ww" path="res://scenes/cell_highlights.tscn" id="2_u2lur"]
-[ext_resource type="Script" path="res://scripts/team.gd" id="4_d0oyt"]
-[ext_resource type="PackedScene" uid="uid://clm04funcvv8s" path="res://scenes/cruiser2.tscn" id="5_tyo2b"]
-[ext_resource type="PackedScene" uid="uid://dta0a7mqliou5" path="res://scenes/ui.tscn" id="6_pp0hx"]
-[ext_resource type="Script" path="res://scenes/camera_controls.gd" id="7_ecmic"]
-[ext_resource type="PackedScene" uid="uid://035h7y1karyx" path="res://scenes/fighter2.tscn" id="9_orkit"]
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_yqmlu"]
+[ext_resource type="PackedScene" uid="uid://67sq8x5fq6ww" path="res://scenes/UI/cell_highlights.tscn" id="2_u2lur"]
+[ext_resource type="Script" path="res://scenes/units/team.gd" id="4_d0oyt"]
+[ext_resource type="PackedScene" uid="uid://clm04funcvv8s" path="res://scenes/units/cruiser.tscn" id="5_tyo2b"]
+[ext_resource type="PackedScene" uid="uid://dta0a7mqliou5" path="res://scenes/UI/ui.tscn" id="6_pp0hx"]
+[ext_resource type="Script" path="res://scenes/cameras/camera_controls.gd" id="7_ecmic"]
+[ext_resource type="PackedScene" uid="uid://035h7y1karyx" path="res://scenes/units/fighter.tscn" id="9_orkit"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_yqmlu")
@@ -22,10 +22,10 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 65537, 0, 0, 65538, 0, 0,
 [node name="HeroShips" type="Node" parent="."]
 script = ExtResource("4_d0oyt")
 
-[node name="Cruiser2" parent="HeroShips" instance=ExtResource("5_tyo2b")]
+[node name="Cruiser" parent="HeroShips" instance=ExtResource("5_tyo2b")]
 position = Vector2(278, 306)
 
-[node name="Fighter2" parent="HeroShips" instance=ExtResource("9_orkit")]
+[node name="Fighter" parent="HeroShips" instance=ExtResource("9_orkit")]
 position = Vector2(553, 536)
 
 [node name="EnemyShips" type="Node" parent="."]

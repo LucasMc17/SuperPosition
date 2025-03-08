@@ -61,12 +61,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			handle_select()
 
 func handle_select():
-	print('selected')
-	#movement_options.chosen.get_available_moves()
-	#get_available_moves()
 	GameState.current_unit = self
 	option_machine.current_option.Enter()
-	#EventBus.show_available_units.emit([])
 
 func handle_move(cell, direction_to_face, cost):
 	global_position = Navigation.snap_to_tile(Navigation.get_pos_from_coords(cell), true)
