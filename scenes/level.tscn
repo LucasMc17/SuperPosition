@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://j1bnvdngfuyk"]
+[gd_scene load_steps=9 format=3 uid="uid://j1bnvdngfuyk"]
 
 [ext_resource type="TileSet" uid="uid://b42qd03ln3h6l" path="res://tilesets/battle-field.tres" id="1_anb6f"]
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_yqmlu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/team.gd" id="4_d0oyt"]
 [ext_resource type="PackedScene" uid="uid://clm04funcvv8s" path="res://scenes/cruiser2.tscn" id="5_tyo2b"]
 [ext_resource type="PackedScene" uid="uid://dta0a7mqliou5" path="res://scenes/ui.tscn" id="6_pp0hx"]
+[ext_resource type="Script" path="res://scenes/camera_controls.gd" id="7_ecmic"]
 [ext_resource type="PackedScene" uid="uid://035h7y1karyx" path="res://scenes/fighter2.tscn" id="9_orkit"]
 
 [node name="Level" type="Node2D"]
@@ -33,6 +34,7 @@ script = ExtResource("4_d0oyt")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(384, 384)
 zoom = Vector2(1.35, 1.35)
+script = ExtResource("7_ecmic")
 
 [node name="UI" parent="Camera2D" instance=ExtResource("6_pp0hx")]
 position = Vector2(-695, -400)

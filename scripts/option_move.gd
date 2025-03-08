@@ -23,4 +23,4 @@ func Enter():
 	EventBus.show_move_options.emit(moves)
 
 func Select(group, cell):
-	unit.handle_move(cell, group.cost)
+	unit.handle_move(cell, unit.direction, group.cost)

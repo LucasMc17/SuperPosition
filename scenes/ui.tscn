@@ -14,6 +14,7 @@ offset_top = 10.0
 offset_right = 74.0
 offset_bottom = 74.0
 texture_normal = ExtResource("1_lrhfn")
+metadata/_edit_use_anchors_ = true
 
 [node name="undo_button" type="TextureButton" parent="."]
 offset_left = 10.0
@@ -31,5 +32,5 @@ texture_normal = ExtResource("4_1tsnr")
 
 [connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="undo_button" to="." method="_on_undo_button_pressed"]
-[connection signal="pressed" from="confirm_button" to="." method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="confirm_button" to="." method="_on_undo_button_pressed"]
+[connection signal="pressed" from="confirm_button" to="." method="_on_confirm_button_pressed"]
