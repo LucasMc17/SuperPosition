@@ -22,10 +22,10 @@ var has_acted = false
 var remaining_movement_points = current_momentum
 var original_coords : Vector2
 var original_direction : directions
+var direction_map = [0, 90, 180, 270, 0]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var direction_map = [0, 90, 180, 270, 0]
 	rotation_degrees = direction_map[direction]
 	global_position = Navigation.snap_to_tile(global_position, true)
 	#sprite.scale.y = size
@@ -67,6 +67,7 @@ func handle_select():
 func handle_move(cell, direction_to_face, cost):
 	global_position = Navigation.snap_to_tile(Navigation.get_pos_from_coords(cell), true)
 	direction = direction_to_face
+	rotation_degrees = direction_map[direction]
 	current_coords = get_current_coords(cell)
 	has_moved = true
 	remaining_movement_points -= cost
@@ -82,6 +83,7 @@ func init_turn():
 
 func reset_turn():
 	direction = original_direction
+	rotation_degrees = direction_map[direction]
 	current_coords = get_current_coords(original_coords)
 	global_position = Navigation.snap_to_tile(Navigation.get_pos_from_coords(original_coords), true)
 	has_moved = false

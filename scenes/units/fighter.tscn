@@ -1,10 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://035h7y1karyx"]
+[gd_scene load_steps=5 format=3 uid="uid://035h7y1karyx"]
 
 [ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/units/unit.tscn" id="1_ygd8o"]
+[ext_resource type="Texture2D" uid="uid://chf8abkxx5jsj" path="res://assets/fighter.png" id="2_s16cy"]
 [ext_resource type="Script" path="res://options/movement/option_move.gd" id="2_vsu8y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pagrw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s16cy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Fighter" instance=ExtResource("1_ygd8o")]
 direction = 4
+
+[node name="Sprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_pagrw")
+animation = &"default"
 
 [node name="option_machine" parent="." index="1" node_paths=PackedStringArray("initial_option")]
 initial_option = NodePath("move")

@@ -1,13 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://clm04funcvv8s"]
+[gd_scene load_steps=6 format=3 uid="uid://clm04funcvv8s"]
 
 [ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/units/unit.tscn" id="1_bumjn"]
 [ext_resource type="Script" path="res://options/movement/option_move.gd" id="2_so4oh"]
+[ext_resource type="Texture2D" uid="uid://c6i4aa8b8idwm" path="res://assets/cruiser.png" id="2_wdf20"]
 [ext_resource type="Script" path="res://options/movement/option_turn.gd" id="3_5peso"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eb0b6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wdf20")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Cruiser2" instance=ExtResource("1_bumjn")]
 momentum_limits = 3
 current_momentum = 3
 size = 2
+
+[node name="Sprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_eb0b6")
+animation = &"default"
 
 [node name="option_machine" parent="." index="1" node_paths=PackedStringArray("initial_option")]
 initial_option = NodePath("turn")
