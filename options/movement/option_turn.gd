@@ -1,5 +1,7 @@
 extends Option
 
+const ICON = preload('res://assets/turn_option.png')
+
 func get_direction(turning, direction):
 		if turning == 'left':
 			if direction == unit.directions.UP:

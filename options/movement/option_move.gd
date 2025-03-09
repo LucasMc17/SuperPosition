@@ -1,5 +1,6 @@
 extends Option
 
+const ICON = preload('res://assets/move_option.png')
 
 func Enter():
 	clear()

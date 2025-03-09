@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://j1bnvdngfuyk"]
+[gd_scene load_steps=10 format=3 uid="uid://j1bnvdngfuyk"]
 
 [ext_resource type="TileSet" uid="uid://b42qd03ln3h6l" path="res://tilesets/battle-field.tres" id="1_anb6f"]
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_yqmlu"]
 [ext_resource type="PackedScene" uid="uid://67sq8x5fq6ww" path="res://scenes/UI/cell_highlights.tscn" id="2_u2lur"]
 [ext_resource type="Script" path="res://scenes/units/team.gd" id="4_d0oyt"]
 [ext_resource type="PackedScene" uid="uid://clm04funcvv8s" path="res://scenes/units/cruiser.tscn" id="5_tyo2b"]
-[ext_resource type="PackedScene" uid="uid://dta0a7mqliou5" path="res://scenes/UI/ui.tscn" id="6_pp0hx"]
+[ext_resource type="PackedScene" uid="uid://dta0a7mqliou5" path="res://scenes/UI/turn_commands.tscn" id="6_pp0hx"]
 [ext_resource type="Script" path="res://scenes/cameras/camera_controls.gd" id="7_ecmic"]
+[ext_resource type="PackedScene" uid="uid://cw7ygbwovxfgd" path="res://scenes/UI/option_select.tscn" id="9_o6wx5"]
 [ext_resource type="PackedScene" uid="uid://035h7y1karyx" path="res://scenes/units/fighter.tscn" id="9_orkit"]
 
 [node name="Level" type="Node2D"]
@@ -32,9 +33,12 @@ position = Vector2(553, 536)
 script = ExtResource("4_d0oyt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(384, 384)
+position = Vector2(398, 389)
 zoom = Vector2(1.35, 1.35)
 script = ExtResource("7_ecmic")
 
-[node name="UI" parent="Camera2D" instance=ExtResource("6_pp0hx")]
-position = Vector2(-695, -400)
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="turn_commands" parent="Camera2D/CanvasLayer" instance=ExtResource("6_pp0hx")]
+
+[node name="option_select" parent="Camera2D/CanvasLayer" instance=ExtResource("9_o6wx5")]

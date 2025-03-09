@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var exit_button = $exit_button
 @onready var undo_button = $undo_button

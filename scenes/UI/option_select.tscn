@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw7ygbwovxfgd"]
+
+[ext_resource type="Script" path="res://scenes/UI/option_select.gd" id="1_77r2y"]
+[ext_resource type="Texture2D" uid="uid://bfm4g2f8i2b67" path="res://assets/confirm button.png" id="1_wyxj6"]
+
+[node name="option_select" type="HBoxContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -64.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_77r2y")
+
+[node name="confirm_button" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("1_wyxj6")
+
+[node name="confirm_button2" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("1_wyxj6")
+
+[node name="confirm_button3" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("1_wyxj6")

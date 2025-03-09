@@ -2,10 +2,16 @@ extends Node
 
 var current_player : Node
 var current_unit : Unit
+var UI_options : HBoxContainer
+
+func select_unit(unit : Unit):
+	current_unit = unit
+	UI_options.get_unit_options(unit)
 
 func init_unit_select():
 	EventBus.show_move_options.emit([])
 	current_unit = null
+	UI_options.get_unit_options(null)
 	current_player.get_available_units()
 
 func start_turn():

@@ -61,7 +61,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			handle_select()
 
 func handle_select():
-	GameState.current_unit = self
+	#GameState.current_unit = self
+	GameState.select_unit(self)
 	option_machine.current_option.Enter()
 
 func handle_move(cell, direction_to_face, cost):
