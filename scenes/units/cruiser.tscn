@@ -26,9 +26,6 @@ sprite_frames = SubResource("SpriteFrames_eb0b6")
 animation = &"default"
 offset = Vector2(2.08165e-12, 32)
 
-[node name="option_machine" parent="." index="1" node_paths=PackedStringArray("initial_option")]
-initial_option = NodePath("turn")
-
 [node name="move" type="Node2D" parent="option_machine" index="0"]
 script = ExtResource("2_so4oh")
 

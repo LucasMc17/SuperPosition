@@ -23,9 +23,9 @@ func get_direction(turning, direction):
 				return unit.directions.UP
 
 func Enter():
+	clear()
 	if unit.remaining_movement_points < 3:
 		return
-	clear()
 	var direction_to_degrees = [0, 90, 180, 270, 0]
 	var head_coord : Vector2 = unit.current_coords[0]
 	var right_offset = Vector2(1, -1)
@@ -39,3 +39,4 @@ func Enter():
 
 func Select(group, cell):
 	unit.handle_move(cell, group.direction, group.cost)
+	clear()

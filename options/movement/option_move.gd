@@ -25,3 +25,4 @@ func Enter():
 
 func Select(group, cell):
 	unit.handle_move(cell, unit.direction, group.cost)
+	clear()

@@ -22,8 +22,5 @@ direction = 4
 sprite_frames = SubResource("SpriteFrames_pagrw")
 animation = &"default"
 
-[node name="option_machine" parent="." index="1" node_paths=PackedStringArray("initial_option")]
-initial_option = NodePath("move")
-
 [node name="move" type="Node2D" parent="option_machine" index="0"]
 script = ExtResource("2_vsu8y")

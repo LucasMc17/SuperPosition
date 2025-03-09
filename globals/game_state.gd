@@ -9,6 +9,8 @@ func select_unit(unit : Unit):
 	UI_options.get_unit_options(unit)
 
 func init_unit_select():
+	if current_unit:
+		current_unit.option_machine.current_option = current_unit.option_machine.initial_option
 	EventBus.show_move_options.emit([])
 	current_unit = null
 	UI_options.get_unit_options(null)
