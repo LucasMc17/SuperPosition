@@ -20,21 +20,37 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 65537, 0, 0, 65538, 0, 0,
 
 [node name="cell_highlights" parent="." instance=ExtResource("2_u2lur")]
 
-[node name="HeroShips" type="Node" parent="."]
+[node name="hero_ships" type="Node" parent="."]
 script = ExtResource("4_d0oyt")
 
-[node name="Cruiser" parent="HeroShips" instance=ExtResource("5_tyo2b")]
-position = Vector2(278, 306)
+[node name="Cruiser" parent="hero_ships" instance=ExtResource("5_tyo2b")]
+position = Vector2(170, 585)
+direction = 0
+available = true
 
-[node name="Fighter" parent="HeroShips" instance=ExtResource("9_orkit")]
+[node name="Fighter" parent="hero_ships" instance=ExtResource("9_orkit")]
 position = Vector2(553, 536)
+momentum_limits = 1
+current_momentum = 1
+size = 1
+available = true
 
-[node name="EnemyShips" type="Node" parent="."]
+[node name="enemy_ships" type="Node" parent="."]
 script = ExtResource("4_d0oyt")
+
+[node name="Fighter" parent="enemy_ships" instance=ExtResource("9_orkit")]
+position = Vector2(676, 165)
+momentum_limits = 1
+current_momentum = 1
+size = 1
+available = true
+
+[node name="Cruiser" parent="enemy_ships" instance=ExtResource("5_tyo2b")]
+position = Vector2(352, 157)
+direction = 1
+available = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(398, 389)
-zoom = Vector2(1.35, 1.35)
 script = ExtResource("7_ecmic")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]

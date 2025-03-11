@@ -3,6 +3,8 @@ extends Node
 var current_player : Node
 var current_unit : Unit
 var UI_options : HBoxContainer
+var hero_ships
+var enemy_ships
 
 func select_unit(unit : Unit):
 	current_unit = unit
@@ -26,8 +28,10 @@ func reset_turn():
 	init_unit_select()
 
 func end_turn():
-	# damage stuff will happen here
-	# switch active player
+	if current_player == hero_ships:
+		current_player = enemy_ships
+	elif current_player == enemy_ships:
+		current_player = hero_ships
 	start_turn()
 	init_unit_select()
 

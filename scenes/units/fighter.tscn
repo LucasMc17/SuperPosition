@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://035h7y1karyx"]
+[gd_scene load_steps=6 format=3 uid="uid://035h7y1karyx"]
 
 [ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/units/unit.tscn" id="1_ygd8o"]
 [ext_resource type="Texture2D" uid="uid://chf8abkxx5jsj" path="res://assets/fighter.png" id="2_s16cy"]
 [ext_resource type="Script" path="res://options/movement/option_move.gd" id="2_vsu8y"]
+[ext_resource type="Script" path="res://options/attack/option_sol_laser.gd" id="4_1j7wq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pagrw"]
 animations = [{
@@ -17,6 +18,11 @@ animations = [{
 
 [node name="Fighter" instance=ExtResource("1_ygd8o")]
 direction = 4
+momentum_limits = 1
+current_momentum = 1
+size = 1
+available = true
+max_health = 1
 
 [node name="Sprite" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_pagrw")
@@ -24,3 +30,6 @@ animation = &"default"
 
 [node name="move" type="Node2D" parent="option_machine" index="0"]
 script = ExtResource("2_vsu8y")
+
+[node name="sol_laser" type="Node2D" parent="option_machine" index="1"]
+script = ExtResource("4_1j7wq")

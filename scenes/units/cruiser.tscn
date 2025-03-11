@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://clm04funcvv8s"]
+[gd_scene load_steps=8 format=3 uid="uid://clm04funcvv8s"]
 
 [ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/units/unit.tscn" id="1_bumjn"]
 [ext_resource type="Script" path="res://options/movement/option_move.gd" id="2_so4oh"]
 [ext_resource type="Texture2D" uid="uid://c6i4aa8b8idwm" path="res://assets/cruiser.png" id="2_wdf20"]
 [ext_resource type="Script" path="res://options/movement/option_turn.gd" id="3_5peso"]
+[ext_resource type="Script" path="res://options/attack/option_sol_laser.gd" id="5_ry71o"]
+[ext_resource type="Script" path="res://options/attack/option_side_cannons.gd" id="6_k5bcs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eb0b6"]
 animations = [{
@@ -16,10 +18,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Cruiser2" instance=ExtResource("1_bumjn")]
+[node name="Cruiser" instance=ExtResource("1_bumjn")]
+direction = 0
 momentum_limits = 3
 current_momentum = 3
 size = 2
+available = true
+max_health = 3
 
 [node name="Sprite" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_eb0b6")
@@ -31,3 +36,9 @@ script = ExtResource("2_so4oh")
 
 [node name="turn" type="Node2D" parent="option_machine" index="1"]
 script = ExtResource("3_5peso")
+
+[node name="sol_laser" type="Node2D" parent="option_machine" index="2"]
+script = ExtResource("5_ry71o")
+
+[node name="side_cannons" type="Node2D" parent="option_machine" index="3"]
+script = ExtResource("6_k5bcs")

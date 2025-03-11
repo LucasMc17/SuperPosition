@@ -11,10 +11,14 @@ enum directions {UP, RIGHT, DOWN, LEFT, OMNI}
 @export_category("Actions")
 @export var available : bool = true
 
+@export_category("Status")
+@export var max_health : int
+
 @onready var current_coords : Array[Vector2] = [Navigation.get_coords_from_pos(global_position)]
 @onready var player = get_parent()
 @onready var sprite = $Sprite
 @onready var option_machine = $option_machine
+@onready var health = max_health
 
 var available_moves = []
 var has_moved = false
@@ -26,6 +30,7 @@ var direction_map = [0, 90, 180, 270, 0]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(health)
 	rotation_degrees = direction_map[direction]
 	global_position = Navigation.snap_to_tile(global_position, true)
 	#sprite.scale.y = size
@@ -38,6 +43,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func handle_damage(damage : int):
+	print(health)
+	health -= damage
+	if health <= 0:
+		queue_free()
+	print(health)
 
 func get_current_coords(head_coord):
 	var result: Array[Vector2] = [head_coord]
