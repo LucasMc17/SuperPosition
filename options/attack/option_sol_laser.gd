@@ -1,6 +1,8 @@
 extends Option
 
-const ICON = preload('res://assets/sol_laser_option.png')
+const ICON = preload('res://assets/sprites/sol_laser_option.png')
+
+@onready var SFX = $sound_effects
 
 func Enter():
 	clear()
@@ -16,7 +18,9 @@ func Enter():
 	EventBus.show_move_options.emit(moves)
 
 func Select(group, cell):
+	print(SFX)
 	clear()
+	SFX.play()
 	unit.has_acted = true
 	group.target.handle_damage(1)
 	

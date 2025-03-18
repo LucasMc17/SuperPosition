@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c80vlndo6xvkc"
-path="res://.godot/imported/side_cannons_option.png-76efa6e76401297d38dd9cfdb629d277.ctex"
+uid="uid://c6i4aa8b8idwm"
+path="res://.godot/imported/cruiser.png-e95cbe98ac81891a660a7ddc157fbcf3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/side_cannons_option.png"
-dest_files=["res://.godot/imported/side_cannons_option.png-76efa6e76401297d38dd9cfdb629d277.ctex"]
+source_file="res://assets/sprites/cruiser.png"
+dest_files=["res://.godot/imported/cruiser.png-e95cbe98ac81891a660a7ddc157fbcf3.ctex"]
 
 [params]
 

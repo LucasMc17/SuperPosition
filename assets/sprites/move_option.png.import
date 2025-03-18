@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rul2g2gb6lng"
-path="res://.godot/imported/sol_laser_option.png-042b35fb281c9b51ab580718c15bb8ce.ctex"
+uid="uid://d17dt78i0qxi"
+path="res://.godot/imported/move_option.png-15d6e27c358ea8916e5db101ccd221af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sol_laser_option.png"
-dest_files=["res://.godot/imported/sol_laser_option.png-042b35fb281c9b51ab580718c15bb8ce.ctex"]
+source_file="res://assets/sprites/move_option.png"
+dest_files=["res://.godot/imported/move_option.png-15d6e27c358ea8916e5db101ccd221af.ctex"]
 
 [params]
 

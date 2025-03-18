@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfm4g2f8i2b67"
-path="res://.godot/imported/confirm button.png-64e6d6a8fc1ae9cefc8adc3a05037c5f.ctex"
+uid="uid://cot17tagbekjt"
+path="res://.godot/imported/highlight.png-c55600b305653eb850ef83fd44745897.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/confirm button.png"
-dest_files=["res://.godot/imported/confirm button.png-64e6d6a8fc1ae9cefc8adc3a05037c5f.ctex"]
+source_file="res://assets/sprites/highlight.png"
+dest_files=["res://.godot/imported/highlight.png-c55600b305653eb850ef83fd44745897.ctex"]
 
 [params]
 

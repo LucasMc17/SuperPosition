@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d17dt78i0qxi"
-path="res://.godot/imported/move_option.png-bf0c611bf63742808ee48b0712cf2a86.ctex"
+uid="uid://bk2x1aomrkq7q"
+path="res://.godot/imported/exit button.png-06ed1484a161aaa1b31bd582ce96cf4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/move_option.png"
-dest_files=["res://.godot/imported/move_option.png-bf0c611bf63742808ee48b0712cf2a86.ctex"]
+source_file="res://assets/sprites/exit button.png"
+dest_files=["res://.godot/imported/exit button.png-06ed1484a161aaa1b31bd582ce96cf4a.ctex"]
 
 [params]
 

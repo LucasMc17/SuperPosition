@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6tsvhkvkoj40"
-path="res://.godot/imported/turn_option.png-be8d94d71dff71d7736eb20cf405f515.ctex"
+uid="uid://chf8abkxx5jsj"
+path="res://.godot/imported/fighter.png-a932c30ed012208087da7590601e7ad7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/turn_option.png"
-dest_files=["res://.godot/imported/turn_option.png-be8d94d71dff71d7736eb20cf405f515.ctex"]
+source_file="res://assets/sprites/fighter.png"
+dest_files=["res://.godot/imported/fighter.png-a932c30ed012208087da7590601e7ad7.ctex"]
 
 [params]
 

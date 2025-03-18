@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://035h7y1karyx"]
+[gd_scene load_steps=9 format=3 uid="uid://035h7y1karyx"]
 
 [ext_resource type="PackedScene" uid="uid://c0mbp0ash3bkn" path="res://scenes/units/unit.tscn" id="1_ygd8o"]
-[ext_resource type="Texture2D" uid="uid://chf8abkxx5jsj" path="res://assets/fighter.png" id="2_s16cy"]
+[ext_resource type="Texture2D" uid="uid://chf8abkxx5jsj" path="res://assets/sprites/fighter.png" id="2_s16cy"]
 [ext_resource type="Script" path="res://options/movement/option_move.gd" id="2_vsu8y"]
-[ext_resource type="Script" path="res://options/attack/option_sol_laser.gd" id="4_1j7wq"]
+[ext_resource type="PackedScene" uid="uid://cu8cdwf6w7a66" path="res://options/attack/option_sol_laser.tscn" id="4_l4yrr"]
+[ext_resource type="AudioStream" uid="uid://cvbwrie8b63n5" path="res://assets/SFX/movement_small_ship.ogg" id="5_yi5o4"]
+[ext_resource type="AudioStream" uid="uid://b5kt0mbs0smgb" path="res://assets/SFX/damage_ship.ogg" id="6_jxpny"]
+[ext_resource type="AudioStream" uid="uid://c371sxk85gues" path="res://assets/SFX/destruction_small_ship.wav" id="7_44suo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pagrw"]
 animations = [{
@@ -18,10 +21,6 @@ animations = [{
 
 [node name="Fighter" instance=ExtResource("1_ygd8o")]
 direction = 4
-momentum_limits = 1
-current_momentum = 1
-size = 1
-available = true
 max_health = 1
 
 [node name="Sprite" parent="." index="0"]
@@ -31,5 +30,13 @@ animation = &"default"
 [node name="move" type="Node2D" parent="option_machine" index="0"]
 script = ExtResource("2_vsu8y")
 
-[node name="sol_laser" type="Node2D" parent="option_machine" index="1"]
-script = ExtResource("4_1j7wq")
+[node name="sol_laser" parent="option_machine" index="1" instance=ExtResource("4_l4yrr")]
+
+[node name="movement_sounds" parent="." index="2"]
+stream = ExtResource("5_yi5o4")
+
+[node name="damage_sounds" parent="." index="3"]
+stream = ExtResource("6_jxpny")
+
+[node name="destroyed_sounds" parent="." index="4"]
+stream = ExtResource("7_44suo")

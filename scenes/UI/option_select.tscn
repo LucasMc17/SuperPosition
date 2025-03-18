@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw7ygbwovxfgd"]
 
 [ext_resource type="Script" path="res://scenes/UI/option_select.gd" id="1_77r2y"]
-[ext_resource type="Texture2D" uid="uid://bfm4g2f8i2b67" path="res://assets/confirm button.png" id="1_wyxj6"]
+[ext_resource type="Texture2D" uid="uid://bfm4g2f8i2b67" path="res://assets/sprites/confirm button.png" id="1_wyxj6"]
 [ext_resource type="Theme" uid="uid://c78ivcp3cmmrc" path="res://themes/selected.tres" id="2_15rhm"]
 
 [node name="option_select" type="HBoxContainer"]

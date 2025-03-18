@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rvj7fbgbidus"
-path="res://.godot/imported/undo button.png-057afc4fdc47d35f9766622d54b8946b.ctex"
+uid="uid://c80vlndo6xvkc"
+path="res://.godot/imported/side_cannons_option.png-8cf5eeb38b68fe017b0a11d2c2978ba5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/undo button.png"
-dest_files=["res://.godot/imported/undo button.png-057afc4fdc47d35f9766622d54b8946b.ctex"]
+source_file="res://assets/sprites/side_cannons_option.png"
+dest_files=["res://.godot/imported/side_cannons_option.png-8cf5eeb38b68fe017b0a11d2c2978ba5.ctex"]
 
 [params]
 

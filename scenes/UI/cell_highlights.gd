@@ -1,7 +1,7 @@
 extends Node2D
 
-const HIGHLIGHT = preload('res://assets/highlight.png')
-const CELL_HIGHLIGHT = preload('res://assets/cell_highlight.png')
+const HIGHLIGHT = preload('res://assets/sprites/highlight.png')
+const CELL_HIGHLIGHT = preload('res://assets/sprites/cell_highlight.png')
 
 @onready var move_lights = $movement_highlights
 @onready var unit_lights = $unit_highlights

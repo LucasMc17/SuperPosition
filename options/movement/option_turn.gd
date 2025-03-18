@@ -1,6 +1,6 @@
 extends Option
 
-const ICON = preload('res://assets/turn_option.png')
+const ICON = preload('res://assets/sprites/turn_option.png')
 
 func get_direction(turning, direction):
 		if turning == 'left':

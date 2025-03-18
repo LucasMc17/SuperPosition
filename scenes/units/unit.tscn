@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0mbp0ash3bkn"]
 
 [ext_resource type="Script" path="res://scenes/units/unit.gd" id="1_3rdqh"]
-[ext_resource type="Texture2D" uid="uid://cot17tagbekjt" path="res://assets/highlight.png" id="2_8jx3c"]
+[ext_resource type="Texture2D" uid="uid://cot17tagbekjt" path="res://assets/sprites/highlight.png" id="2_bhh7h"]
 [ext_resource type="Script" path="res://options/option_machine.gd" id="3_3ftyh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v5ivx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_8jx3c")
+"texture": ExtResource("2_bhh7h")
 }],
 "loop": true,
 "name": &"idle",
@@ -24,3 +24,9 @@ animation = &"idle"
 
 [node name="option_machine" type="Node" parent="."]
 script = ExtResource("3_3ftyh")
+
+[node name="movement_sounds" type="AudioStreamPlayer2D" parent="."]
+
+[node name="damage_sounds" type="AudioStreamPlayer2D" parent="."]
+
+[node name="destroyed_sounds" type="AudioStreamPlayer2D" parent="."]

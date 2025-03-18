@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dta0a7mqliou5"]
 
 [ext_resource type="Script" path="res://scenes/UI/turn_commands.gd" id="1_823t5"]
-[ext_resource type="Texture2D" uid="uid://bk2x1aomrkq7q" path="res://assets/exit button.png" id="1_lrhfn"]
-[ext_resource type="Texture2D" uid="uid://rvj7fbgbidus" path="res://assets/undo button.png" id="2_x3c83"]
-[ext_resource type="Texture2D" uid="uid://bfm4g2f8i2b67" path="res://assets/confirm button.png" id="4_1tsnr"]
+[ext_resource type="Texture2D" uid="uid://bk2x1aomrkq7q" path="res://assets/sprites/exit button.png" id="1_lrhfn"]
+[ext_resource type="Texture2D" uid="uid://rvj7fbgbidus" path="res://assets/sprites/undo button.png" id="2_x3c83"]
+[ext_resource type="Texture2D" uid="uid://bfm4g2f8i2b67" path="res://assets/sprites/confirm button.png" id="4_1tsnr"]
 
 [node name="turn_commands" type="VBoxContainer"]
 offset_right = 64.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwutdya5o1ctu"
-path="res://.godot/imported/tile.png-455dd1073ac41712b0ee435e5393be66.ctex"
+uid="uid://rul2g2gb6lng"
+path="res://.godot/imported/sol_laser_option.png-e251cf28e1591f5054e4b031c45de20d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tile.png"
-dest_files=["res://.godot/imported/tile.png-455dd1073ac41712b0ee435e5393be66.ctex"]
+source_file="res://assets/sprites/sol_laser_option.png"
+dest_files=["res://.godot/imported/sol_laser_option.png-e251cf28e1591f5054e4b031c45de20d.ctex"]
 
 [params]
 

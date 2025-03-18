@@ -1,6 +1,6 @@
 extends Option
 
-const ICON = preload('res://assets/side_cannons_option.png')
+const ICON = preload('res://assets/sprites/side_cannons_option.png')
 
 func Enter():
 	clear()

@@ -18,6 +18,9 @@ enum directions {UP, RIGHT, DOWN, LEFT, OMNI}
 @onready var player = get_parent()
 @onready var sprite = $Sprite
 @onready var option_machine = $option_machine
+@onready var movement_sounds = $movement_sounds
+@onready var damage_sounds = $damage_sounds
+@onready var destroyed_sounds = $destroyed_sounds
 @onready var health = max_health
 
 var available_moves = []
@@ -48,8 +51,10 @@ func handle_damage(damage : int):
 	print(health)
 	health -= damage
 	if health <= 0:
+		destroyed_sounds.play()
 		queue_free()
-	print(health)
+	else:
+		damage_sounds.play()
 
 func get_current_coords(head_coord):
 	var result: Array[Vector2] = [head_coord]
@@ -84,6 +89,7 @@ func handle_move(cell, direction_to_face, cost):
 	current_coords = get_current_coords(cell)
 	has_moved = true
 	remaining_movement_points -= cost
+	movement_sounds.play()
 	#if has_moved: # and has_acted to go here later
 		#GameState.init_unit_select()
 
